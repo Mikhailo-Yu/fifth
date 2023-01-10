@@ -5,23 +5,22 @@ console.log(numOrStr)
 // console.log('ви скасували')
 // } else if( numOrStr.trim() === '' ) {
 // console.log('Empty String');
-// } else if ( isNaN( +numOrStr ) ) {
+// } else if ( isNaN( Number(numOrStr)) ) {
 // console.log(' number is Ba_NaN')
 // } else {
 // console.log('OK!')
 // }
 
-
-switch (true) {
-    case (numOrStr === null):
+switch (numOrStr && numOrStr.trim() && isNaN( Number(numOrStr))) {
+    case  null:
         console.log('ви скасували')
-        break
-    case (numOrStr.trim() === ''):
+        break;
+    case '':
         console.log('Empty String')
-        break
-    case isNaN( +numOrStr):
+        break;
+    case true:
         console.log(' number is Ba_NaN')
-        break
+        break;
     default:
         console.log('OK!')
-}
+} 
